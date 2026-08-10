@@ -1,1 +1,0 @@
-For quantitative results, all count data in 'adjCountPerBottle' from a sample should be summed across records and divided by the 'towTrapsVolume' in the zoo_fieldData in order to estimate the total abundance per L. 

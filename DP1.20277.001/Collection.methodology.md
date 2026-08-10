@@ -1,0 +1,3 @@
+**This data product was discontinued as of January, 2026.** Samples are collected, minimally processed, and frozen on dry ice in the field. After intermediate storage in ultra-low temperature freezers, they are shipped to an external laboratory which uses two targeted Quantitative Polymerase Chain Reaction (qPCR) analysis runs to produce the abundance estimates for: 1) bacteria and archaea (using 16S rRNA), 2) fungi (using ITS rRNA).
+
+Samples are processed using established qPCR workflows that give estimates of abundance for each microbial group (bacteria/archaea and fungi). The exact qPCR primer sequences used may change over time as improved primers are developed.

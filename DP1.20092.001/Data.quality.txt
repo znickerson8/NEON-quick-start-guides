@@ -2,4 +2,7 @@ Data on conditions during sampling can be found in the gwc_fieldSuperParent tabl
 
 Note that values can be blank (or NA when downloaded using neonUtilities) for analyteConcentration for a few different reasons. Users are encouraged to look at entries in sampleCondition and belowDetectionQF for details on the reason for a particular record. Records with entries other than "GOOD" or "OK" in sampleCondition likely indicate that data for a given analyte were not collected and users cannot infer a value for the analyte to include in their analysis. For records with "ND" values for belowDetectionQF, users can infer that the analyte concentration is very low and may want to include the records in their analysis.
 
+The pH is measured two times for a groundwater chemistry sampling event, once in the field at the time of collection and again in the Domain laboratory prior to alkalinity titrations. Given the potential for additional uncertainty arising from sample collection/processing, transport, and storage time prior to analysis, we strongly recommend using the pH reading measured at the time of groundwater sample collection in the gwc_fieldSuperParent table.
+
 Please note that quality checks are comprehensive but not exhaustive; therefore, unknown data quality issues may exist. Users are advised to evaluate quality of the data as relevant to the scientific research question being addressed, perform data review and post-processing prior to analysis, and use the data quality information and issue logs included in download packages to aid interpretation.
+

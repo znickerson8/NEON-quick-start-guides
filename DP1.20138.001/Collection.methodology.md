@@ -1,0 +1,1 @@
+**This data product was discontinued as of October 1, 2025.** Cell count samples are collected monthly in conjunction with surface water chemistry, and 18-25 mL are preserved in the field with 2-2.8 mL of 10% formaldehyde. Bacterial cells are stained with propidium iodine and counted under fluorescent microscopy at an external analytical laboratory. 

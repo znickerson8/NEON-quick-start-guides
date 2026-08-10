@@ -1,2 +1,1 @@
-For an in-depth look at the processing please see the NEON Standard Operating Procedure: Post-Processing of Wadeable Stream Morphology Data from NEON Wadeable Streams (NEON.DOC.004857).
-
+In ArcPro or similar software, points from the total station survey are converted to real-world coordinates using a similarity transformation based on the known benchmark locations. Thalweg, habitat polygons, and geomorphic feature layers are created from the total station point data using a combination of ArcPro tools and manual editing based on survey point names. Metric calculations are completed using a custom R code using the shapefile inputs created in ArcPro.

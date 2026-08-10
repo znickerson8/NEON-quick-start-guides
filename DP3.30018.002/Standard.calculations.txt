@@ -1,0 +1,1 @@
+Canopy nitrogen content (%) maps should be masked using the NDVI mask to exclude non-vegetated areas.

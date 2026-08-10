@@ -1,0 +1,3 @@
+Data results from observations in square, multi-scale, 400m<sup>2</sup> plots. At least once per year, the presence and percent cover of species and ancillary variables are documented in 1m<sup>2</sup> subplots. Every other year, species presence is also documented in 10m<sup>2</sup> subplots and 100m<sup>2</sup> subplots, which can be combined to reflect the presence of species across the entire 400m<sup>2</sup> plot. Included information: Taxonomic identification, taxonomic uncertainty when appropriate, nativity, and plot location.
+
+Data collection for Plant presence and percent cover was temporarily suspended in 2026. This suspension was implemented due to unusual budget demands, and sampling will resume according to the normal schedule in 2027. 

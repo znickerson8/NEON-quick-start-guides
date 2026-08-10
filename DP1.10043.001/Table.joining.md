@@ -9,7 +9,7 @@ mos_expertTaxonomistIDProcessed|mos_archivepooling|Requires intermediate table: 
 mos_expertTaxonomistIDRaw|mos_archivepooling|Requires intermediate table: join via mos_subsampling table
 mos_archivepooling|mos_barcoding|Full join not recommended: tables not related
 mos_archivepooling|mos_sorting|Requires intermediate table: join via mos\_sorting table and mos\_expertTaxonomistID table (either Processed or Raw) and mos\_subsampling table
-mos_archivepooling|mos_subsampling|archiveID
+mos_archivepooling|mos_subsampling|poolSampleID
 mos_archivepooling|mos_trapping|Requires intermediate table: join via mos\_sorting and  mos\_expertTaxonomistID table (either Processed or Raw) and mos\_subsampling tables
 mos_barcoding|mos_expertTaxonomistIDProcessed|Not fully automatable: multiple individualIDs pooled into each individualIDList
 mos_barcoding|mos_expertTaxonomistIDRaw|Not fully automatable: multiple individualIDs pooled into each individualIDList

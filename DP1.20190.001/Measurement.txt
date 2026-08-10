@@ -1,1 +1,5 @@
-Stream conductivity and temperature (0.1 Hz), concentrations of salt- and gas-tracers in samples (mg/L; ppm), experiment start and end times, and thirty wetted widths (m) from reaeration experiments using a salt-tracer, or a simultaneous salt-tracer and inert gas-tracer.
+In April, 2025, SF6 releases for this data product were discontinued at all NEON sites (https://www.neonscience.org/impact/observatory-blog/discontinuing-sf6-releases-part-reaeration-dp120190001-all-neon-sites)
+
+Following the discontinuation of SF6 releases: Stream conductivity and temperature (0.1 Hz), experiment start and end times, and thirty wetted widths (m) from reaeration experiments using only a salt-slug.
+
+Prior to the discontinuation of SF6 releases: Stream conductivity and temperature (0.1 Hz), concentrations of salt- and gas-tracers in samples (mg/L; ppm), experiment start and end times, and thirty wetted widths (m) from reaeration experiments using a salt-tracer, or a simultaneous salt-tracer and inert gas-tracer (SF6).

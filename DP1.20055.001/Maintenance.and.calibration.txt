@@ -1,0 +1,1 @@
+Sensors are calibrated prior to installation at field sites and recalibrated on an annual basis. Sensors are only removed from their measurement location for maintenance on an as-needed basis to ensure data quality.

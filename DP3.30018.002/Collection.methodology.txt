@@ -1,0 +1,1 @@
+Canopy nitrogen is a model derived from the "Spectrometer orthorectified surface directional reflectance - flightline" data product (DP1.30006.001) and the "Plant foliar trait" data product (DP1.10026.001). See documentation for those data products for sensor details and collection methodology.

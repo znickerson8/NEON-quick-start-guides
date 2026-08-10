@@ -1,0 +1,1 @@
+Measurements of water temperature in degrees Celcius and specific conductance in microSiemens per centimeter at lakes from subsurface moored array of sensors.

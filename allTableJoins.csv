@@ -112,7 +112,7 @@
 "mos_expertTaxonomistIDRaw","mos_archivepooling","Requires intermediate table: join via mos_subsampling table","Requires intermediate table: join via mos_subsampling table",NA
 "mos_archivepooling","mos_barcoding","Full join not recommended: tables not related","Full join not recommended: tables not related",NA
 "mos_archivepooling","mos_sorting","Requires intermediate table: join via mos_sorting table and mos_expertTaxonomistID table (either Processed or Raw) and mos_subsampling table","Requires intermediate table: join via mos_sorting table and mos_expertTaxonomistID table (either Processed or Raw) and mos_subsampling table",NA
-"mos_archivepooling","mos_subsampling","archiveID","archiveID",NA
+"mos_archivepooling","mos_subsampling","poolSampleID","poolSampleID",NA
 "mos_archivepooling","mos_trapping","Requires intermediate table: join via mos_sorting and  mos_expertTaxonomistID table (either Processed or Raw) and mos_subsampling tables","Requires intermediate table: join via mos_sorting and  mos_expertTaxonomistID table (either Processed or Raw) and mos_subsampling tables",NA
 "mos_barcoding","mos_expertTaxonomistIDProcessed","Not fully automatable: multiple individualIDs pooled into each individualIDList","Not fully automatable: multiple individualIDs pooled into each individualIDList",NA
 "mos_barcoding","mos_expertTaxonomistIDRaw","Not fully automatable: multiple individualIDs pooled into each individualIDList","Not fully automatable: multiple individualIDs pooled into each individualIDList",NA
@@ -175,6 +175,12 @@
 "mcc_soilTaxonTableMetadata_16S","mcc_soilTaxonTableMetadata_ITS","dnaSampleID","dnaSampleID",NA
 "mcc_taxonTableLabSummary","mcc_soilTaxonTableMetadata_16S","testMethod","testMethod",NA
 "mcc_taxonTableLabSummary","mcc_soilTaxonTableMetadata_ITS","testMethod","testMethod",NA
+"mct_soilSampleMetadata_ITS","mct_soilPerSampleTaxonomy_ITS","dnaSampleID","dnaSampleID",NA
+"mct_soilSampleMetadata_16S","mct_soilPerSampleTaxonomy_16S","dnaSampleID","dnaSampleID",NA
+"mct_taxonTableLabSummary","mct_soilSampleMetadata_ITS","codeVersion","codeVersion",NA
+"mct_taxonTableLabSummary","mct_soilSampleMetadata_16S","codeVersion","codeVersion",NA
+"sls_soilCoreCollection","mct_soilSampleMetadata_ITS","geneticSampleID","geneticSampleID",NA
+"sls_soilCoreCollection","mct_soilSampleMetadata_16S","geneticSampleID","geneticSampleID",NA
 "sls_soilCoreCollection","sls_soilMoisture","sampleID","sampleID",NA
 "sls_soilCoreCollection","sls_soilpH","sampleID","sampleID",NA
 "sls_soilCoreCollection","sls_bgcSubsampling","sampleID","sampleID",NA
@@ -289,6 +295,12 @@
 "mcc_benthicTaxonTableMetadata_16S","mcc_benthicTaxonTableMetadata_ITS","dnaSampleID","dnaSampleID",NA
 "mcc_taxonTableLabSummary","mcc_benthicTaxonTableMetadata_16S","testMethod","testMethod",NA
 "mcc_taxonTableLabSummary","mcc_benthicTaxonTableMetadata_ITS","testMethod","testMethod",NA
+"mct_benthicSampleMetadata_ITS","mct_benthicPerSampleTaxonomy_ITS","dnaSampleID","dnaSampleID",NA
+"mct_benthicSampleMetadata_16S","mct_benthicPerSampleTaxonomy_16S","dnaSampleID","dnaSampleID",NA
+"mct_taxonTableLabSummary","mct_benthicSampleMetadata_ITS","codeVersion","codeVersion",NA
+"mct_taxonTableLabSummary","mct_benthicSampleMetadata_16S","codeVersion","codeVersion",NA
+"amb_fieldParent","mct_benthicSampleMetadata_ITS","dnaSampleID","dnaSampleID",NA
+"amb_fieldParent","mct_benthicSampleMetadata_16S","dnaSampleID","dnaSampleID",NA
 "gwc_fieldSuperParent","gwc_fieldData","parentSampleID","parentSampleID",NA
 "gwc_fieldData","gwc_domainLabData","parentSampleID","parentSampleID",NA
 "gwc_fieldData","gwc_externalLabDataByAnalyte","Not fully automatable: sampleID in gwc_externalLabDataByAnalyte corresponds to filtSampleID, filtNutSampleID, rawSampleID, rawNutSampleID, pcnSampleID, and dicSampleID in gwc_fieldData","Not fully automatable: sampleID in gwc_externalLabDataByAnalyte corresponds to filtSampleID, filtNutSampleID, rawSampleID, rawNutSampleID, pcnSampleID, and dicSampleID in gwc_fieldData",NA
@@ -338,10 +350,6 @@
 "inv_fieldData","inv_taxonomyRaw","sampleID","sampleID",NA
 "inv_fieldData","inv_taxonomyProcessed","sampleID","sampleID",NA
 "inv_taxonomyRaw","inv_taxonomyProcessed","Join not recommended. If interested in processed NEON vs. raw lab taxonomy, join by sampleID + scientificName + sizeClass.","Join not recommended. If interested in processed NEON vs. raw lab taxonomy, join by sampleID + scientificName + sizeClass.",NA
-"inv_fieldData","inv_pervial","sampleID","sampleID",NA
-"inv_persample","inv_pervial","sampleID","sampleID",NA
-"inv_taxonomyRaw","inv_pervial","Join not recommended. Data resolution does not match other tables.","Join not recommended. Data resolution does not match other tables.",NA
-"inv_taxonomyProcessed","inv_pervial","Join not recommended. Data resolution does not match other tables.","Join not recommended. Data resolution does not match other tables.",NA
 "inv_fieldData","inv_dnaExtraction","geneticSampleID","geneticSampleID",NA
 "inv_dnaExtraction","inv_pcrAmplification","dnaSampleID","dnaSampleID",NA
 "inv_dnaExtraction","inv_markerGeneSequencing","dnaSampleID","dnaSampleID",NA
@@ -374,11 +382,22 @@
 "mcc_swTaxonTableMetadata_16S","mcc_swTaxonTableMetadata_ITS","dnaSampleID","dnaSampleID",NA
 "mcc_taxonTableLabSummary","mcc_swTaxonTableMetadata_16S","testMethod","testMethod",NA
 "mcc_taxonTableLabSummary","mcc_swTaxonTableMetadata_ITS","testMethod","testMethod",NA
+"mct_surfaceWaterSampleMetadata_ITS","mct_surfaceWaterPerSampleTaxonomy_ITS","dnaSampleID","dnaSampleID",NA
+"mct_surfaceWaterSampleMetadata_16S","mct_surfaceWaterPerSampleTaxonomy_16S","dnaSampleID","dnaSampleID",NA
+"mct_taxonTableLabSummary","mct_surfaceWaterSampleMetadata_ITS","codeVersion","codeVersion",NA
+"mct_taxonTableLabSummary","mct_surfaceWaterSampleMetadata_16S","codeVersion","codeVersion",NA
+"amc_fieldGenetic","mct_surfaceWaterSampleMetadata_ITS","geneticSampleID","geneticSampleID",NA
+"amc_fieldGenetic","mct_surfaceWaterSampleMetadata_16S","geneticSampleID","geneticSampleID",NA
 "alg_fieldData","alg_domainLabChemistry","parentSampleID","parentSampleID",NA
-"alg_domainLabChemistry","alg_algaeExternalLabDataPerSample","sampleID","sampleID",NA
-"alg_algaeExternalLabDataPerSample","alg_fieldData","Requires intermediate table: join via alg_domainLabChemistry table","Requires intermediate table: join via alg_domainLabChemistry table",NA
-"alg_algaeExternalLabDataPerSample","alg_algaeExternalLabQA","Join not recommended. Users interested in data quality can join by batchID, analyte, this will create a longer table that includes blanks and standards.","Join not recommended. Users interested in data quality can join by batchID, analyte, this will create a longer table that includes blanks and standards.",NA
-"asi_externalLabPOMSummaryData","Any other table","Join not recommended. Quality control data can be connected to analyses by laboratoryName, analyte, and overlap of analysisDate with lab-specific start and end dates.","Join not recommended. Quality control data can be connected to analyses by laboratoryName, analyte, and overlap of analysisDate with lab-specific start and end dates.",NA
+"alg_algaeExternalLabDataPerSample","alg_domainLabChemistry","sampleID,sampleType,replicate","sampleID,analysisType,filterNumber",NA
+"alg_algaeExternalLabDataPerSample","alg_fieldData","Requires intermediate table: join via alg_domainLabChemistry table","",NA
+"alg_algaeExternalLabDataPerSample","alg_algaeExternalLabQA","Join not recommended. Users interested in data quality can join by batchID, analyte, this will create a longer table that includes blanks and standards.","",NA
+"alg_fieldData","alg_domainLabChemistryComp","compositeSampleID","compositeSampleID",NA
+"alg_algaeDataPerSampleCompChl","alg_domainLabChemistryComp","sampleID","analyteSampleID",NA
+"alg_algaeDataPerSampleCompCNPS","alg_domainLabChemistryComp","sampleID","analyteSampleID",NA
+"alg_algaeDataPerSampleCompChl","alg_algaeExternalLabQA","Join not recommended. Users interested in data quality can join by batchID, analyte, this will create a longer table that includes blanks and standards.","",NA
+"alg_algaeDataPerSampleCompCNPS","alg_algaeExternalLabQA","Join not recommended. Users interested in data quality can join by batchID, analyte, this will create a longer table that includes blanks and standards.","",NA
+"asi_externalLabPOMSummaryData","Any other table","Join not recommended. Quality control data can be connected to analyses by laboratoryName, analyte, and overlap of analysisDate with lab-specific start and end dates.","",NA
 "alg_fieldData","alg_biomass","parentSampleID","parentSampleID",NA
 "alg_biomass","alg_taxonomyProcessed","sampleID","sampleID",NA
 "alg_biomass","alg_taxonomyRaw","sampleID","sampleID",NA
@@ -472,35 +491,49 @@
 "mga_swGroupAbundances","amc_fieldCellCounts","geneticSampleID","geneticSampleID",NA
 "mga_labSummary","Any other table","Join not recommended. Data resolution does not match other tables.","Join not recommended. Data resolution does not match other tables.",NA
 "amb_fieldParent","mms_benthicMetagenomeDnaExtraction","metagenomicsSampleID","genomicsSampleID",NA
+"mic_benthicDnaPooling","mms_benthicMetagenomeDnaExtraction","Not fully automatable: multiple subsampleIDs are pooled into each dnaSampleIDList","",NA
+"mic_benthicDnaPooling","amb_fieldParent","Requires intermediate table: join via mms_benthicMetagenomeDnaExtraction","",NA
+"mic_benthicDnaPooling","mms_benthicMetagenomeSequencing","poolSampleID","dnaSampleID",NA
+"mic_benthicDnaPooling","mms_benthicRawDataFiles","poolSampleID","dnaSampleID",NA
 "mms_benthicMetagenomeDnaExtraction","mms_benthicMetagenomeSequencing","dnaSampleID","dnaSampleID",NA
 "mms_benthicMetagenomeSequencing","mms_benthicRawDataFiles","dnaSampleID","dnaSampleID",NA
 "amb_fieldParent","mms_benthicMetagenomeSequencing","Requires intermediate table: join via mms_benthicMetagenomeDnaExtraction","",NA
 "amb_fieldParent","mms_benthicRawDataFiles","Requires intermediate table: join via mms_benthicMetagenomeDnaExtraction","",NA
 "mms_benthicMetagenomeDnaExtraction","mms_benthicRawDataFiles","dnaSampleID","dnaSampleID",NA
+"mmg_benthicDnaExtraction","mic_benthicDnaPooling","Not fully automatable: multiple subsampleIDs are pooled into each dnaSampleIDList","",NA
 "mmg_benthicDnaExtraction","mmg_benthicPcrAmplification_16S","dnaSampleID","dnaSampleID",NA
 "mmg_benthicDnaExtraction","mmg_benthicPcrAmplification_ITS","dnaSampleID","dnaSampleID",NA
-"mmg_benthicPcrAmplification_16S","mmg_benthicMarkerGeneSequencing_16S","dnaSampleID","dnaSampleID",NA
-"mmg_benthicPcrAmplification_ITS","mmg_benthicMarkerGeneSequencing_ITS","dnaSampleID","dnaSampleID",NA
-"mmg_benthicMarkerGeneSequencing_16S","mmg_benthicRawDataFiles","Not fully automatable: Filter the raw data table to only 16S samples, then join on dnaSampleID","Not fully automatable: Filter the raw data table to only 16S samples, then join on dnaSampleID",NA
-"mmg_benthicMarkerGeneSequencing_ITS","mmg_benthicRawDataFiles","Not fully automatable: Filter the raw data table to only ITS samples, then join on dnaSampleID","Not fully automatable: Filter the raw data table to only ITS samples, then join on dnaSampleID",NA
+"mic_benthicDnaPooling","mmg_benthicPcrAmplification_16S","poolSampleID","dnaSampleID",NA
+"mic_benthicDnaPooling","mmg_benthicPcrAmplification_ITS","poolSampleID","dnaSampleID",NA
+"mic_benthicDnaPooling","mmg_benthicMarkerGeneSequencing_16S","poolSampleID","dnaSampleID",NA
+"mic_benthicDnaPooling","mmg_benthicMarkerGeneSequencing_ITS","poolSampleID","dnaSampleID",NA
+"mic_benthicDnaPooling","mmg_benthicRawDataFiles","poolSampleID","dnaSampleID",NA
+"mic_benthicDnaPooling","amb_fieldParent","Requires intermediate table: join via mmg_benthicDnaExtraction","",NA
+"mmg_benthicPcrAmplification_16S","mmg_benthicMarkerGeneSequencing_16S","dnaSampleID","",NA
+"mmg_benthicPcrAmplification_ITS","mmg_benthicMarkerGeneSequencing_ITS","dnaSampleID","",NA
+"mmg_benthicMarkerGeneSequencing_16S","mmg_benthicRawDataFiles","Not fully automatable: Filter the raw data table to only 16S samples, then join on dnaSampleID","",NA
+"mmg_benthicMarkerGeneSequencing_ITS","mmg_benthicRawDataFiles","Not fully automatable: Filter the raw data table to only ITS samples, then join on dnaSampleID","",NA
 "mmg_benthicDnaExtraction","amb_fieldParent","geneticSampleID","geneticSampleID",NA
-"mmg_benthicMarkerGeneSequencing_16S","mcc_benthicSeqVariantMetadata_16S","dnaSampleID","dnaSampleID",NA
-"mmg_benthicMarkerGeneSequencing_ITS","mcc_benthicSeqVariantMetadata_ITS","dnaSampleID","dnaSampleID",NA
-"amb_fieldParent","mmg_benthicMarkerGeneSequencing_16S","Requires intermediate table: join via mmg_benthicDnaExtraction table","Requires intermediate table: join via mmg_benthicDnaExtraction table",NA
-"amb_fieldParent","mmg_benthicMarkerGeneSequencing_ITS","Requires intermediate table: join via mmg_benthicDnaExtraction table","Requires intermediate table: join via mmg_benthicDnaExtraction table",NA
-"amb_fieldParent","mmg_benthicPcrAmplification_16S","Requires intermediate table: join via mmg_benthicDnaExtraction table","Requires intermediate table: join via mmg_benthicDnaExtraction table",NA
-"amb_fieldParent","mmg_benthicPcrAmplification_ITS","Requires intermediate table: join via mmg_benthicDnaExtraction table","Requires intermediate table: join via mmg_benthicDnaExtraction table",NA
-"amb_fieldParent","mmg_benthicRawDataFiles","Requires intermediate table: join via mmg_benthicDnaExtraction table","Requires intermediate table: join via mmg_benthicDnaExtraction table",NA
+"amb_fieldParent","mmg_benthicMarkerGeneSequencing_16S","Requires intermediate table: join via mmg_benthicDnaExtraction and mic_benthicDnaPooling tables","",NA
+"amb_fieldParent","mmg_benthicMarkerGeneSequencing_ITS","Requires intermediate table: join via mmg_benthicDnaExtraction and mic_benthicDnaPooling tables","",NA
+"amb_fieldParent","mmg_benthicPcrAmplification_16S","Requires intermediate table: join via mmg_benthicDnaExtraction and mic_benthicDnaPooling tables","",NA
+"amb_fieldParent","mmg_benthicPcrAmplification_ITS","Requires intermediate table: join via mmg_benthicDnaExtraction and mic_benthicDnaPooling tables","",NA
+"amb_fieldParent","mmg_benthicRawDataFiles","Requires intermediate table: join via mmg_benthicDnaExtraction and mic_benthicDnaPooling tables","",NA
 "mmg_benthicDnaExtraction","mmg_benthicMarkerGeneSequencing_16S","dnaSampleID","dnaSampleID",NA
 "mmg_benthicDnaExtraction","mmg_benthicMarkerGeneSequencing_ITS","dnaSampleID","dnaSampleID",NA
 "mmg_benthicDnaExtraction","mmg_benthicRawDataFiles","dnaSampleID","dnaSampleID",NA
-"mmg_benthicMarkerGeneSequencing_16S","mmg_benthicMarkerGeneSequencing_ITS","Join not recommended: different sequencing types","Join not recommended: different sequencing types",NA
-"mmg_benthicMarkerGeneSequencing_16S","mmg_benthicPcrAmplification_ITS","Join not recommended: different sequencing types","Join not recommended: different sequencing types",NA
-"mmg_benthicMarkerGeneSequencing_ITS","mmg_benthicPcrAmplification_16S","Join not recommended: different sequencing types","Join not recommended: different sequencing types",NA
-"mmg_benthicPcrAmplification_16S","mmg_benthicPcrAmplification_ITS","Join not recommended: different sequencing types","Join not recommended: different sequencing types",NA
-"mmg_benthicPcrAmplification_16S","mmg_benthicRawDataFiles","Not fully automatable: Filter the raw data table to only 16S samples, then join on dnaSampleID","Not fully automatable: Filter the raw data table to only 16S samples, then join on dnaSampleID",NA
-"mmg_benthicPcrAmplification_ITS","mmg_benthicRawDataFiles","Not fully automatable: Filter the raw data table to only ITS samples, then join on dnaSampleID","Not fully automatable: Filter the raw data table to only ITS samples, then join on dnaSampleID",NA
+"mmg_benthicMarkerGeneSequencing_16S","mmg_benthicMarkerGeneSequencing_ITS","Join not recommended: different sequencing types","",NA
+"mmg_benthicMarkerGeneSequencing_16S","mmg_benthicPcrAmplification_ITS","Join not recommended: different sequencing types","",NA
+"mmg_benthicMarkerGeneSequencing_ITS","mmg_benthicPcrAmplification_16S","Join not recommended: different sequencing types","",NA
+"mmg_benthicPcrAmplification_16S","mmg_benthicPcrAmplification_ITS","Join not recommended: different sequencing types","",NA
+"mmg_benthicPcrAmplification_16S","mmg_benthicRawDataFiles","Not fully automatable: Filter the raw data table to only 16S samples, then join on dnaSampleID","",NA
+"mmg_benthicPcrAmplification_ITS","mmg_benthicRawDataFiles","Not fully automatable: Filter the raw data table to only ITS samples, then join on dnaSampleID","",NA
 "amc_fieldGenetic","mms_swMetagenomeDnaExtraction","metagenomicSampleID","genomicsSampleID",NA
+"mic_swDnaPooling","mms_swMetagenomeDnaExtraction","Not fully automatable: multiple subsampleIDs are pooled into each dnaSampleIDList ","",NA
+"mic_swDnaPooling","amc_fieldGenetic","Requires intermediate table: join via mms_swMetagenomeDnaExtraction table","",NA
+"mic_swDnaPooling","amc_fieldSuperParent","Requires intermediate table: join via amc_fieldGenetic table","",NA
+"mic_swDnaPooling","mms_swMetagenomeSequencing","poolSampleID","dnaSampleID",NA
+"mic_swDnaPooling","mms_swRawDataFiles","poolSampleID","dnaSampleID",NA
 "mms_swMetagenomeDnaExtraction","mms_swMetagenomeSequencing","dnaSampleID","dnaSampleID",NA
 "mms_swMetagenomeSequencing","mms_metagenomeDnaExtraction","dnaSampleID","dnaSampleID",NA
 "mms_swRawDataFiles","mms_swMetagenomeDnaExtraction","dnaSampleID","dnaSampleID",NA
@@ -511,7 +544,15 @@
 "amc_fieldSuperParent","mms_swMetagenomeDnaExtraction","Requires intermediate table: join via mms_fieldGenetic table","",NA
 "amc_fieldSuperParent","mms_swMetagenomeSequencing","Requires intermediate table: join via mms_fieldGenetic and mms_swMetagenomeDnaExtraction tables","",NA
 "amc_fieldSuperParent","mms_swRawDataFiles","Requires intermediate table: join via mms_fieldGenetic and mms_swMetagenomeDnaExtraction tables","",NA
-"amc_fieldGenetic","mmg_swDnaExtraction","geneticSampleID","geneticSampleID",NA
+"amc_fieldGenetic","mmg_swDnaExtraction","geneticSampleID","",NA
+"mmg_swDnaExtraction","mic_swDnaPooling","Not fully automatable: multiple subsampleIDs are pooled into each dnaSampleIDList","",NA
+"mic_swDnaPooling","mmg_swPcrAmplification_16S","poolSampleID","dnaSampleID",NA
+"mic_swDnaPooling","mmg_swPcrAmplification_ITS","poolSampleID","dnaSampleID",NA
+"mic_swDnaPooling","mmg_swMarkerGeneSequencing_16S","poolSampleID","dnaSampleID",NA
+"mic_swDnaPooling","mmg_swMarkerGeneSequencing_ITS","poolSampleID","dnaSampleID",NA
+"mic_swDnaPooling","mmg_swRawDataFiles","poolSampleID","dnaSampleID",NA
+"mic_swDnaPooling","amc_fieldGenetic","Requires intermediate table: join via mmg_swDnaExtraction table","",NA
+"mic_swDnaPooling","amc_fieldSuperParent","Requires intermediate table: join via amc_fieldGenetic table","",NA
 "mmg_swPcrAmplification_16S","mmg_swDnaExtraction","dnaSampleID","dnaSampleID",NA
 "mmg_swPcrAmplification_ITS","mmg_swDnaExtraction","dnaSampleID","dnaSampleID",NA
 "mmg_swMarkerGeneSequencing_16S","mmg_swPcrAmplification_16S","dnaSampleID","dnaSampleID",NA
@@ -521,44 +562,161 @@
 "mmg_swRawDataFiles","mmg_swPcrAmplification_ITS","dnaSampleID","dnaSampleID",NA
 "mmg_swRawDataFiles","mmg_swDnaExtraction","dnaSampleID","dnaSampleID",NA
 "amc_fieldGenetic","amc_fieldSuperParent","parentSampleID","parentSampleID",NA
-"amc_fieldGenetic","mmg_swMarkerGeneSequencing_16S","Requires intermediate table: join via mmg_swDnaExtraction table","Requires intermediate table: join via mmg_swDnaExtraction table",NA
-"amc_fieldGenetic","mmg_swMarkerGeneSequencing_ITS","Requires intermediate table: join via mmg_swDnaExtraction table","Requires intermediate table: join via mmg_swDnaExtraction table",NA
-"amc_fieldGenetic","mmg_swPcrAmplification_16S","Requires intermediate table: join via mmg_swDnaExtraction table","Requires intermediate table: join via mmg_swDnaExtraction table",NA
-"amc_fieldGenetic","mmg_swPcrAmplification_ITS","Requires intermediate table: join via mmg_swDnaExtraction table","Requires intermediate table: join via mmg_swDnaExtraction table",NA
-"amc_fieldGenetic","mmg_swRawDataFiles","Requires intermediate table: join via mmg_swDnaExtraction table","Requires intermediate table: join via mmg_swDnaExtraction table",NA
-"amc_fieldSuperParent","mmg_swDnaExtraction","Requires intermediate table: join via amc_fieldGenetic table","Requires intermediate table: join via amc_fieldGenetic table",NA
-"amc_fieldSuperParent","mmg_swMarkerGeneSequencing_16S","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables",NA
-"amc_fieldSuperParent","mmg_swMarkerGeneSequencing_ITS","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables",NA
-"amc_fieldSuperParent","mmg_swPcrAmplification_16S","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables",NA
-"amc_fieldSuperParent","mmg_swPcrAmplification_ITS","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables",NA
-"amc_fieldSuperParent","mmg_swRawDataFiles","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables",NA
-"mmg_swMarkerGeneSequencing_16S","mmg_swMarkerGeneSequencing_ITS","Join not recommended: different sequencing types","Join not recommended: different sequencing types",NA
-"mmg_swMarkerGeneSequencing_16S","mmg_swPcrAmplification_ITS","Join not recommended: different sequencing types","Join not recommended: different sequencing types",NA
+"amc_fieldGenetic","mmg_swMarkerGeneSequencing_16S","Requires intermediate table: join via mmg_swDnaExtraction table","",NA
+"amc_fieldGenetic","mmg_swMarkerGeneSequencing_ITS","Requires intermediate table: join via mmg_swDnaExtraction table","",NA
+"amc_fieldGenetic","mmg_swPcrAmplification_16S","Requires intermediate table: join via mmg_swDnaExtraction table","",NA
+"amc_fieldGenetic","mmg_swPcrAmplification_ITS","Requires intermediate table: join via mmg_swDnaExtraction table","",NA
+"amc_fieldGenetic","mmg_swRawDataFiles","Requires intermediate table: join via mmg_swDnaExtraction table","",NA
+"amc_fieldSuperParent","mmg_swDnaExtraction","Requires intermediate table: join via amc_fieldGenetic table","",NA
+"amc_fieldSuperParent","mmg_swMarkerGeneSequencing_16S","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables","",NA
+"amc_fieldSuperParent","mmg_swMarkerGeneSequencing_ITS","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables","",NA
+"amc_fieldSuperParent","mmg_swPcrAmplification_16S","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables","",NA
+"amc_fieldSuperParent","mmg_swPcrAmplification_ITS","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables","",NA
+"amc_fieldSuperParent","mmg_swRawDataFiles","Requires intermediate table: join via amc_fieldGenetic and mmg_swDnaExtraction tables","",NA
+"mmg_swMarkerGeneSequencing_16S","mmg_swMarkerGeneSequencing_ITS","Join not recommended: different sequencing types","",NA
+"mmg_swMarkerGeneSequencing_16S","mmg_swPcrAmplification_ITS","Join not recommended: different sequencing types","",NA
 "mmg_swMarkerGeneSequencing_16S","mmg_swRawDataFiles","dnaSampleID","dnaSampleID",NA
-"mmg_swMarkerGeneSequencing_ITS","mmg_swPcrAmplification_16S","Join not recommended: different sequencing types","Join not recommended: different sequencing types",NA
+"mmg_swMarkerGeneSequencing_ITS","mmg_swPcrAmplification_16S","Join not recommended: different sequencing types","",NA
 "mmg_swMarkerGeneSequencing_ITS","mmg_swRawDataFiles","dnaSampleID","dnaSampleID",NA
-"mmg_swPcrAmplification_16S","mmg_swPcrAmplification_ITS","Join not recommended: different sequencing types","Join not recommended: different sequencing types",NA
+"mmg_swPcrAmplification_16S","mmg_swPcrAmplification_ITS","Join not recommended: different sequencing types","",NA
 "mmg_swPcrAmplification_16S","mmg_swRawDataFiles","dnaSampleID","dnaSampleID",NA
 "fsp_boutMetadata","fsp_sampleMetadata","eventID","eventID",NA
 "fsp_sampleMetadata","cfc_fieldData","sampleID","sampleID",NA
 "fsp_sampleMetadata","fsp_spectralData","spectralSampleID","spectralSampleID",NA
 "fsp_boutMetadata","fsp_spectralData","Requires intermediate table: Join via fsp_sampleMetadata","Requires intermediate table: Join via fsp_sampleMetadata",NA
-"per_sample","Any other table","Join not recommended: spectralSampleID is the linking variable, but per_sample table contains data records for every wavelength measured. Note that this table will be named per_sample when stacking data using neonUtilities; in downloads from data portal, these data will be presented in individual files named for the sample they describe.","Join not recommended: spectralSampleID is the linking variable, but per_sample table contains data records for every wavelength measured. Note that this table will be named per_sample when stacking data using neonUtilities; in downloads from data portal, these data will be presented in individual files named for the sample they describe.",NA
+"fsp_rawSpectra","Any other table","Join not recommended: spectralSampleID is the linking variable, but the fsp_rawSpectra table contains data records for every wavelength measured. Note that this table will be named fsp_rawSpectra when stacking data using the neonUtilities package; in downloads from data portal, these data will be presented in individual files named for the sample they describe.","Join not recommended: spectralSampleID is the linking variable, but the fsp_rawSpectra table contains data records for every wavelength measured. Note that this table will be named fsp_rawSpectra when stacking data using the neonUtilities package; in downloads from data portal, these data will be presented in individual files named for the sample they describe.",NA
 "csd_continuousDischarge","csd_gaugeWaterColumnRegression","regressionID","regressionID",NA
-"csd_continuousDischarge","sdrc_gaugePressureRelationship","Not fully automatable: Join by regressionID and endDate truncated to YYYY-MM-DD HH:MM (without seconds)","Not fully automatable: Join by regressionID and endDate truncated to YYYY-MM-DD HH:MM (without seconds)",NA
 "csd_continuousDischargeUSGS","csd_dischargeRegressionUSGS","usgsDischargeRegID","usgsDischargeRegID",NA
+"csd_dataGapToFillMethodMapping","csd_gapFillingRegression","gapFillRegressionID","gapFillRegressionID",NA
+"csd_continuousDischarge","sdrc_gaugePressureRelationship","Not fully automatable: Join by regressionID and endDate truncated to YYYY-MM-DD HH:MM (without seconds)","Not fully automatable: Join by regressionID and endDate truncated to YYYY-MM-DD HH:MM (without seconds)",NA
+"csd_continuousDischarge","csd_dataGapToFillMethodMapping","Not fully automatable: Join by csd_continuousDischarge:endDate overlapping with date range of records in csd_dataGapToFillMethodMapping","Not fully automatable: Join by csd_continuousDischarge:endDate overlapping with date range of records in csd_dataGapToFillMethodMapping",NA
+"csd_continuousDischarge","csd_constantBiasShift","Not fully automatable: Join by csd_continuousDischarge:endDate overlapping with date range of records in csd_constantBiasShift","Not fully automatable: Join by csd_continuousDischarge:endDate overlapping with date range of records in csd_constantBiasShift",NA
+"csd_continuousDischarge","csd_gapFillingRegression","Not fully automatable: Join by csd_continuousDischarge:endDate overlapping with date range of records in csd_gapFillingRegression","Not fully automatable: Join by csd_continuousDischarge:endDate overlapping with date range of records in csd_gapFillingRegression",NA
+"csd_dataGapToFillMethodMapping","csd_constantBiasShift","Join not recommended, see User Guide","Join not recommended, see User Guide",NA
+"csd_gapFillingRegression","csd_constantBiasShift","Join not recommended, see User Guide","Join not recommended, see User Guide",NA
 "csd_continuousDischarge","csd_continuousDischargeUSGS","Join not recommended, see User Guide","Join not recommended, see User Guide",NA
 "csd_continuousDischarge","csd_dischargeRegressionUSGS","Join not recommended, see User Guide","Join not recommended, see User Guide",NA
 "csd_continuousDischargeUSGS","sdrc_gaugePressureRelationship","Join not recommended, see User Guide","Join not recommended, see User Guide",NA
-"geo_featureInfo","Any other table","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)",NA
-"geo_mappedPointErrors","Any other table","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)",NA
-"geo_missingLine","Any other table","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)",NA
-"geo_pebbleCount","Any other table","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)",NA
-"geo_pebbleFieldData","Any other table","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)",NA
-"geo_rapidHabitatResultsFile","Any other table","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)",NA
-"geo_resultsFile","Any other table","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)",NA
-"geo_surveyFieldData","Any other table","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)",NA
-"geo_totalStation","Any other table","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)","Not fully automatable: Join by siteID and endDate truncated to YYYY-MM (without day or time)",NA
+"geo_misclosureInfo","geo_surveySummary","eventID,surveyEndDate","eventID,surveyEndDate",NA
+"geo_missingLine","geo_surveySummary","eventID,surveyEndDate","eventID,surveyEndDate",NA
+"geo_pebbleCount","geo_pebbleFieldData","eventID,surveyEndDate","eventID,surveyEndDate",NA
+"geo_pebbleCount","geo_surveySummary","eventID,surveyEndDate","eventID,surveyEndDate",NA
+"geo_pebbleFieldData","geo_surveySummary","eventID,surveyEndDate","eventID,surveyEndDate",NA
+"geo_rapidHabitatAssessment","geo_surveySummary","eventID,surveyEndDate","eventID,surveyEndDate",NA
+"geo_rawSurveyData","geo_surveyPoints","eventID,surveyEndDate,surveyPointID","eventID,surveyEndDate,surveyPointID",NA
+"geo_surveySummary","geo_thalwegByHabitatID","eventID,surveyEndDate","eventID,surveyEndDate",NA
+"geo_surveySummary","geo_thalwegByHabitatType","eventID,surveyEndDate","eventID,surveyEndDate",NA
+"geo_surveySummary","geo_thalwegLongProfile","eventID,surveyEndDate","eventID,surveyEndDate",NA
+"geo_surveySummary","geo_trimbleData","eventID,surveyEndDate","eventID,surveyEndDate",NA
+"geo_misclosureInfo","geo_missingLine","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_pebbleCount","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_pebbleFieldData","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_totalStation","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_geomorphicFeatureCount","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_processedSurveyData","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_rapidHabitatAssessment","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_rawSurveyData","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_surveyPoints","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_thalwegByHabitatID","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_thalwegByHabitatType","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_misclosureInfo","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_pebbleCount","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_pebbleFieldData","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_totalStation","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_geomorphicFeatureCount","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_processedSurveyData","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_rapidHabitatAssessment","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_rawSurveyData","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_surveyPoints","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_thalwegByHabitatID","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_thalwegByHabitatType","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_missingLine","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_pebbleCount","geo_totalStation","Join not recommended","Join not recommended",NA
+"geo_pebbleCount","geo_geomorphicFeatureCount","Join not recommended","Join not recommended",NA
+"geo_pebbleCount","geo_processedSurveyData","Join not recommended","Join not recommended",NA
+"geo_pebbleCount","geo_rapidHabitatAssessment","Join not recommended","Join not recommended",NA
+"geo_pebbleCount","geo_rawSurveyData","Join not recommended","Join not recommended",NA
+"geo_pebbleCount","geo_surveyPoints","Join not recommended","Join not recommended",NA
+"geo_pebbleCount","geo_thalwegByHabitatID","Join not recommended","Join not recommended",NA
+"geo_pebbleCount","geo_thalwegByHabitatType","Join not recommended","Join not recommended",NA
+"geo_pebbleCount","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_pebbleCount","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_pebbleCount","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_totalStation","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_geomorphicFeatureCount","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_processedSurveyData","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_rapidHabitatAssessment","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_rawSurveyData","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_surveyPoints","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_thalwegByHabitatID","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_thalwegByHabitatType","Join not recommended","Join not recommended",NA
+"geo_processedSurveyData","geo_thalwegByHabitatID","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_processedSurveyData","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_totalStation","geo_geomorphicFeatureCount","Join not recommended","Join not recommended",NA
+"geo_processedSurveyData","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_totalStation","geo_rapidHabitatAssessment","Join not recommended","Join not recommended",NA
+"geo_rapidHabitatAssessment","geo_surveyPoints","Join not recommended","Join not recommended",NA
+"geo_totalStation","geo_surveyPoints","Join not recommended","Join not recommended",NA
+"geo_rapidHabitatAssessment","geo_thalwegByHabitatType","Join not recommended","Join not recommended",NA
+"geo_totalStation","geo_thalwegByHabitatID","Join not recommended","Join not recommended",NA
+"geo_rapidHabitatAssessment","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_totalStation","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_rawSurveyData","geo_thalwegByHabitatID","Join not recommended","Join not recommended",NA
+"geo_totalStation","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_rawSurveyData","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_thalwegByHabitatID","Join not recommended","Join not recommended",NA
+"geo_rawSurveyData","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_thalwegByHabitatType","Join not recommended","Join not recommended",NA
+"geo_rawSurveyData","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_surveyPoints","geo_thalwegByHabitatID","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_surveyPoints","geo_thalwegByHabitatType","Join not recommended","Join not recommended",NA
+"geo_pebbleFieldData","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_surveyPoints","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_totalStation","geo_geomorphicFeatureCount","Join not recommended","Join not recommended",NA
+"geo_surveyPoints","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_totalStation","geo_processedSurveyData","Join not recommended","Join not recommended",NA
+"geo_surveyPoints","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_totalStation","geo_rapidHabitatAssessment","Join not recommended","Join not recommended",NA
+"geo_surveySummary","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_totalStation","geo_rawSurveyData","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatID","geo_thalwegByHabitatType","Join not recommended","Join not recommended",NA
+"geo_totalStation","geo_surveyPoints","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatID","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatID","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_rapidHabitatAssessment","geo_thalwegByHabitatType","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatID","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_rapidHabitatAssessment","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatType","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatType","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_rawSurveyData","geo_thalwegByHabitatID","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatType","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_rawSurveyData","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_thalwegLongProfile","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_rawSurveyData","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_thalwegLongProfile","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_surveyPoints","geo_thalwegByHabitatID","Join not recommended","Join not recommended",NA
+"geo_transectBankfullWidths","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_surveyPoints","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_surveyPoints","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_surveyPoints","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_surveySummary","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatID","geo_thalwegByHabitatType","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatID","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatID","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatID","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatType","geo_thalwegLongProfile","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatType","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_thalwegByHabitatType","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_thalwegLongProfile","geo_transectBankfullWidths","Join not recommended","Join not recommended",NA
+"geo_thalwegLongProfile","geo_trimbleData","Join not recommended","Join not recommended",NA
+"geo_transectBankfullWidths","geo_trimbleData","Join not recommended","Join not recommended",NA
 "bat_fieldData","bat_pointcollection","endDate","endDate",NA
 "bat_fieldData","bat_sonarRecord","endDate","endDate",NA
 "bat_fieldData","bat_resultsFile","Join not recommended, see Standard Calculations","Join not recommended, see Standard Calculations",NA

@@ -1,2 +1,2 @@
-Continuous discharge, the volumetric rate of water flowing through a stream at a given location, in liters per second, reported at 1 minute resolution.
+Continuous discharge, the volumetric rate of water flowing through a stream at a given location, in liters per second.  Data prior to RELEASE-2026 are reported as 1 minute instantaneous values.  Beginning with RELEASE-2026, and all subsequent releases, data collected beginning with water year 2022 (Oct 1, 2021) are reported as 15-minute averages. 
   

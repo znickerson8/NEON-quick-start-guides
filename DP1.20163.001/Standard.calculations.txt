@@ -1,3 +1,0 @@
-Analytical replicates, indicated by the field 'replicate', should typically be averaged to determine a single value per sample per analyte, before proceeding with further analyses.
-
-Note that the alg_algaeExternalLabDataPerSample table is reported in long format, with one record for each combination of sample and analyte.

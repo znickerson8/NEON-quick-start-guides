@@ -1,0 +1,1 @@
+A float and anchor create a taut line. Precise measurements between temperature and conductivity sensors (HOBO U24) and the pressure transducer (LevelTROLL 400) allows sensor depths to be determined when data are coupled with barometric pressure. 
