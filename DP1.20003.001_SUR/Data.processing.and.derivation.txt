@@ -1,0 +1,1 @@
+"Following the survey, any edits or deletions are performed based on designated entries in the mobile application. Data are then collated and mapCode values are assigned to categorize each shot. Raw easting, northing and height values are retained, no spatial post-processing is required to transform these data.  "

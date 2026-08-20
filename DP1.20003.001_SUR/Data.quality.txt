@@ -1,0 +1,1 @@
+"Data entered in the mobile application are carefully reviewed upon survey completion, including the ""mapped points that contain errors"" table, which documents points needing edits or deletion during post-processing. Data collected on paper datasheets are transcribed within 14 days of collection. "

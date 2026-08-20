@@ -1,0 +1,1 @@
+"Once field data are reviewed, verified, and linked (Habitat Survey and Pebble Count Survey appliation records), spa5tial data are post-processing prior to data publication."
